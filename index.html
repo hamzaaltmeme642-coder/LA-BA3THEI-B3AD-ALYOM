@@ -2,7 +2,10 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
     <title>سعيد هاني سلمان - أبو فكر | لا بعثية بعد اليوم - صفحة تذكارية</title>
     
     <!-- SEO Meta Tags -->
@@ -167,16 +170,20 @@
             box-shadow: inset 0 0 30px rgba(211, 47, 47, 0.3), 0 15px 40px rgba(0, 0, 0, 0.4);
             width: 100%;
             height: auto;
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 1;
+            -webkit-aspect-ratio: 1;
         }
 
         .image-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            -webkit-object-fit: cover;
             display: block;
             filter: grayscale(100%) contrast(1.3) brightness(0.95);
+            -webkit-filter: grayscale(100%) contrast(1.3) brightness(0.95);
             transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
         }
 
         .image-container:hover img {
@@ -262,18 +269,30 @@
             font-weight: bold;
             border-radius: 25px;
             transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
             font-size: 0.95em;
+            -webkit-appearance: none;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         .lang-btn.active {
             background: #d32f2f;
             color: white;
             box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
+            -webkit-box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
         }
 
         .lang-btn:hover {
             transform: translateY(-2px);
+            -webkit-transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+            -webkit-box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+        }
+
+        .lang-btn:active {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
         }
 
         .lang-section {
@@ -326,6 +345,16 @@
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
+            * {
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            body {
+                -webkit-text-size-adjust: 100%;
+                text-size-adjust: 100%;
+            }
+
             .images-section {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -334,14 +363,19 @@
 
             .image-container {
                 aspect-ratio: 4 / 3;
+                -webkit-aspect-ratio: 4 / 3;
+                height: auto;
+                max-height: 300px;
             }
 
             .slogan {
                 font-size: 2.2em;
+                line-height: 1.3;
             }
 
             .name {
                 font-size: 1.4em;
+                margin-bottom: 5px;
             }
 
             .content {
@@ -350,8 +384,8 @@
 
             .biography {
                 padding: 15px;
-                font-size: 0.9em;
-                line-height: 1.7;
+                font-size: 0.95em;
+                line-height: 1.8;
             }
 
             .header {
@@ -369,6 +403,8 @@
             .lang-btn {
                 padding: 8px 16px;
                 font-size: 0.9em;
+                -webkit-appearance: none;
+                appearance: none;
             }
 
             #background-text {
@@ -382,34 +418,53 @@
             .images-section {
                 grid-template-columns: 1fr;
                 gap: 15px;
+                margin-bottom: 25px;
             }
 
             .image-container {
                 aspect-ratio: 3 / 2;
+                -webkit-aspect-ratio: 3 / 2;
+                height: auto;
+                max-height: 250px;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+                -webkit-object-fit: cover;
+                object-fit: cover;
             }
 
             .slogan {
-                font-size: 1.8em;
-                letter-spacing: 1px;
+                font-size: 1.6em;
+                letter-spacing: 0.5px;
+                margin-bottom: 15px;
             }
 
             .name {
-                font-size: 1.2em;
+                font-size: 1.1em;
+                margin-bottom: 5px;
             }
 
             .title {
                 font-size: 0.9em;
+                margin-bottom: 10px;
             }
 
             .content {
-                padding: 20px 12px;
+                padding: 18px 12px;
             }
 
             .biography {
                 padding: 12px;
-                font-size: 0.85em;
-                line-height: 1.6;
+                font-size: 0.9em;
+                line-height: 1.7;
                 border-right: 3px solid #d32f2f;
+            }
+
+            .biography-item {
+                gap: 10px;
+                margin-bottom: 15px;
             }
 
             .biography-item::before {
@@ -418,7 +473,7 @@
             }
 
             .header {
-                padding: 25px 12px;
+                padding: 20px 12px;
                 border-bottom: 2px solid #d32f2f;
             }
 
@@ -435,33 +490,51 @@
                 padding: 7px 14px;
                 font-size: 0.85em;
                 border: 2px solid #d32f2f;
+                -webkit-appearance: none;
+                appearance: none;
+                cursor: pointer;
             }
 
             .lang-btn.active {
                 background: #d32f2f;
                 color: white;
                 box-shadow: 0 3px 10px rgba(211, 47, 47, 0.4);
+                -webkit-box-shadow: 0 3px 10px rgba(211, 47, 47, 0.4);
             }
 
             .footer {
-                padding: 25px 12px;
-                font-size: 0.9em;
+                padding: 20px 12px;
+                font-size: 0.85em;
             }
 
             .footer-name {
                 font-size: 1.1em;
+                margin-bottom: 8px;
             }
 
             .bio-title {
-                font-size: 1.4em;
-                margin-bottom: 20px;
+                font-size: 1.3em;
+                margin-bottom: 18px;
             }
 
             #background-text {
-                font-size: 2.5em;
-                padding: 30px;
+                font-size: 2.2em;
+                padding: 20px;
                 opacity: 0.5;
-                letter-spacing: 10px;
+                letter-spacing: 8px;
+            }
+
+            .container {
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+
+        /* iPhone Notch Support */
+        @supports (padding: max(0px)) {
+            body {
+                padding-left: max(0px, env(safe-area-inset-left));
+                padding-right: max(0px, env(safe-area-inset-right));
             }
         }
     </style>
