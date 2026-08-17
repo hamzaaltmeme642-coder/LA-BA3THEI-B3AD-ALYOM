@@ -43,7 +43,7 @@
             color: #333;
             overflow-x: hidden;
             position: relative;
-            width: 100%;
+            width: 100vw;
             max-width: 100%;
         }
 
@@ -64,7 +64,7 @@
             word-wrap: break-word;
             transform: rotate(-25deg) translate(-5%, -5%);
             text-align: right;
-            padding: 100px;
+            padding: 50px;
             letter-spacing: 15px;
         }
 
@@ -73,10 +73,11 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            padding: 20px 10px;
+            padding: 15px 8px;
             position: relative;
             width: 100%;
             max-width: 100%;
+            overflow-x: hidden;
         }
 
         .container {
@@ -88,6 +89,7 @@
             box-shadow: 0 50px 100px rgba(211, 47, 47, 0.2);
             position: relative;
             z-index: 10;
+            box-sizing: border-box;
         }
 
         @keyframes fadeInUp {
@@ -413,10 +415,10 @@
             }
 
             #background-text {
-                font-size: 2.5em;
-                padding: 40px;
+                font-size: 2em;
+                padding: 20px;
                 opacity: 0.6;
-                letter-spacing: 10px;
+                letter-spacing: 8px;
             }
         }
 
@@ -524,11 +526,11 @@
             }
 
             #background-text {
-                font-size: 1.8em;
-                padding: 15px;
-                opacity: 0.5;
-                letter-spacing: 4px;
-                transform: rotate(-25deg) translate(0%, -5%);
+                font-size: 1.2em;
+                padding: 8px;
+                opacity: 0.4;
+                letter-spacing: 2px;
+                transform: rotate(-25deg) translate(0%, 0%);
             }
 
             .container {
